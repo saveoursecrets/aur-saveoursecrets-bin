@@ -12,7 +12,7 @@ depends=(
   'jsoncpp'
   'dbus'
 )
-source=("https://releases.savoursecrets.com/beta/gui/${pkgver}/arch/x86_64/${pkgname}.tar.gz")
+source=("https://releases.saveoursecrets.com/beta/gui/${pkgver}/arch/x86_64/${pkgname}.tgz")
 sha256sums=('SKIP') # replace with real checksum
 
 package() {

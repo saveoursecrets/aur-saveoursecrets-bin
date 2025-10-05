@@ -1,0 +1,27 @@
+# Arch AUR (binary release)
+
+AUR arch installer for the [saveoursecrets](https://saveoursecrets.com) secure password manager and wallet.
+
+## Developer
+
+```
+makepkg --check
+```
+
+If that works you can install with:
+
+```
+makepkg -si
+```
+
+Verify the installation:
+
+```
+pacman -Ql saveoursecrets
+```
+
+And then to unsinstall:
+
+```
+sudo pacman -R saveoursecrets
+```
