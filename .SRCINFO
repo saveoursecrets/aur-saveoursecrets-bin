@@ -1,4 +1,4 @@
-pkgbase = saveoursecrets
+pkgbase = saveoursecrets-bin
 	pkgdesc = Secure password manager and wallet
 	pkgver = 2.0.0+124
 	pkgrel = 1
@@ -12,4 +12,4 @@ pkgbase = saveoursecrets
 	source = https://releases.saveoursecrets.com/beta/gui/2.0.0+124/arch/x86_64/saveoursecrets.tgz
 	sha256sums = SKIP
 
-pkgname = saveoursecrets
+pkgname = saveoursecrets-bin
