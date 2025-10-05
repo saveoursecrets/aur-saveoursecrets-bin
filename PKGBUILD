@@ -1,5 +1,5 @@
 # Maintainer: sos-developers <aur@saveoursecrets.com>
-pkgname=saveoursecrets
+pkgname=saveoursecrets-bin
 pkgver=2.0.0+124
 pkgrel=1
 pkgdesc="Secure password manager and wallet"
@@ -12,20 +12,20 @@ depends=(
   'jsoncpp'
   'dbus'
 )
-source=("https://releases.saveoursecrets.com/beta/gui/${pkgver}/arch/x86_64/${pkgname}.tgz")
+source=("https://releases.saveoursecrets.com/beta/gui/${pkgver}/arch/x86_64/saveoursecrets.tgz")
 sha256sums=('SKIP') # replace with real checksum
 
 package() {
-  cd "$srcdir/${pkgname}-${pkgver}"
+  cd "$srcdir/saveoursecrets-${pkgver}"
 
-  install -Dm755 saveoursecrets "$pkgdir/usr/opt/$pkgname/saveoursecrets"
-  install -Dm755 sos-extension-helper "$pkgdir/usr/opt/$pkgname/sos-extension-helper"
-  cp -r lib "$pkgdir/usr/opt/$pkgname/"
-  cp -r data "$pkgdir/usr/opt/$pkgname/"
+  install -Dm755 saveoursecrets "$pkgdir/usr/opt/saveoursecrets/saveoursecrets"
+  install -Dm755 sos-extension-helper "$pkgdir/usr/opt/saveoursecrets/sos-extension-helper"
+  cp -r lib "$pkgdir/usr/opt/saveoursecrets/"
+  cp -r data "$pkgdir/usr/opt/saveoursecrets/"
 
-  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/saveoursecrets"
 
   install -d "$pkgdir/usr/bin"
-  ln -sr "$pkgdir/usr/opt/$pkgname/saveoursecrets" "$pkgdir/usr/bin/saveoursecrets"
-  ln -sr "$pkgdir/usr/opt/$pkgname/sos-extension-helper" "$pkgdir/usr/bin/sos-extension-helper"
+  ln -sr "$pkgdir/usr/opt/saveoursecrets/saveoursecrets" "$pkgdir/usr/bin/saveoursecrets"
+  ln -sr "$pkgdir/usr/opt/saveoursecrets/sos-extension-helper" "$pkgdir/usr/bin/sos-extension-helper"
 }
