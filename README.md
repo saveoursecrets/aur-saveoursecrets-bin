@@ -25,3 +25,11 @@ And then to unsinstall:
 ```
 sudo pacman -R saveoursecrets
 ```
+
+To publish, update `.SRCINFO`:
+
+```
+makepkg --printsrcinfo > .SRCINFO
+```
+
+And then run `./aur-push.sh`.
