@@ -32,8 +32,14 @@ And then commit your changes and run `./aur-push.sh`.
 
 If ssh fails due to public key denied run: `ssh aur-sos` and enter the private key password and try again.
 
-Afterwards wait about 10 minutes and then install from the AUR with:
+Afterwards wait about 10 minutes and then check the version:
 
 ```
-paru -Sy saveoursecrets-bin
+curl -s "https://aur.archlinux.org/rpc/?v=5&type=info&arg=saveoursecrets-bin" | jq '.results[0].Version'
+```
+
+Once the version is updated it can be installed or updated with:
+
+```
+paru -S saveoursecrets-bin
 ```
